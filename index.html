@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Horas</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Mis Horas</h1>
+
+        <div id="totalHorasSemana" class="total-horas-semana">
+            <div class="horas-circulo">
+                <span id="horasSemana">0</span>
+            </div>
+        </div>
+
+        <!-- Fecha y hora actuales -->
+        <div class="fecha-hora">
+            <div id="fechaActual" class="fecha-hora-item"></div>
+            <div id="horaActual" class="fecha-hora-item"></div>
+        </div>
+
+        <!-- Botón de registro automático -->
+        <button id="registroAutomatico">Registrar Entrada/Salida</button>
+        <div id="ultimoRegistro">Último Registro: No hay registros aún</div>
+
+    </div>
+
+    <!-- Menú inferior -->
+<footer class="menu-inferior">
+        <div class="menu-item active" id="menu-mis-horas">
+            <i class="fas fa-clock"></i>
+            <span>Mis Horas</span>
+        </div>
+        <div class="menu-item" id="menu-registro-manual">
+            <i class="fas fa-pencil-alt"></i>
+            <span>Registro Manual</span>
+        </div>
+        <div class="menu-item" id="menu-registros">
+            <i class="fas fa-list"></i>
+            <span>Registros</span>
+        </div>
+    </footer>
+    
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Manual - Mis Horas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Registro Manual</h1>
+
+        <!-- Formulario de registro manual -->
+        <form id="registroManualForm">
+            <label for="fechaManual">Fecha:</label>
+            <input type="date" id="fechaManual" required>
+            <label for="horaManual">Hora:</label>
+            <input type="time" id="horaManual" required>
+            <label for="tipoManual">Tipo:</label>
+            <select id="tipoManual" required>
+                <option value="entrada">Entrada</option>
+                <option value="salida">Salida</option>
+            </select>
+            <button type="submit">Guardar Registro Manual</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registroManualForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const fechaManual = document.getElementById('fechaManual').value;
+            const horaManual = document.getElementById('horaManual').value;
+            const tipoManual = document.getElementById('tipoManual').value;
+
+            try {
+                await registrarEntradaSalida(tipoManual, fechaManual, horaManual);
+            } catch (error) {
+                console.error('Error al registrar manualmente:', error);
+            }
+        });
+    </script>
+
+    <!-- Menú inferior -->
+    <footer class="menu-inferior">
+        <div class="menu-item" id="menu-mis-horas">
+            <i class="fas fa-clock"></i>
+            <span>Mis Horas</span>
+        </div>
+        <div class="menu-item active" id="menu-registro-manual">
+            <i class="fas fa-pencil-alt"></i>
+            <span>Registro Manual</span>
+        </div>
+        <div class="menu-item" id="menu-registros">
+            <i class="fas fa-list"></i>
+            <span>Registros</span>
+        </div>
+    </footer>
+    
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <script src="app.js"></script>
+</body>
+</html>

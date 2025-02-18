@@ -1,0 +1,154 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altura total de la ventana */
+    background-color: #f4f4f9; /* Fondo claro */
+}
+
+.total-horas-semana {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.horas-circulo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6em;
+    margin: 0 auto;
+}
+
+.contenedor {
+    text-align: center; /* Centra el texto dentro del contenedor */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 400px; /* Ancho máximo */
+    width: 100%; /* Ocupa el ancho disponible */
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #007bff; /* Azul para el título */
+}
+
+.fecha-hora {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555; /* Gris oscuro para la fecha y hora */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form select, form button {
+    margin-top: 5px;
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.fecha-hora {
+    background-color: #eaeaea; /* Fondo gris */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.fecha-hora-item {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Estilos para el menú inferior */
+.menu-inferior {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    box-sizing: border-box;
+    border-top: 1px solid #ddd;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-item i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.menu-item span {
+    font-size: 12px;
+}
+
+.menu-item:hover {
+    color: #007bff;
+}
+
+/* Estado activo */
+.menu-item.active {
+    color: #0056b3;
+}
+.menu-item.active i {
+    color: #0056b3;
+}

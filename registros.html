@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros - Mis Horas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .refresh-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registros de Entrada/Salida</h1>
+        <table id="tabla-registros">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Tipo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los registros se cargarán aquí -->
+            </tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+    <footer class="menu-inferior">
+        <div class="menu-item" id="menu-mis-horas">
+            <i class="fas fa-clock"></i>
+            <span>Mis Horas</span>
+        </div>
+        <div class="menu-item" id="menu-registro-manual">
+            <i class="fas fa-pencil-alt"></i>
+            <span>Registro Manual</span>
+        </div>
+        <div class="menu-item active" id="menu-registros">
+            <i class="fas fa-list"></i>
+            <span>Registros</span>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</body>
+</html>
