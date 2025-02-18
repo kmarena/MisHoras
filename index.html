@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Horas</title>
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="./manifest.json">
     <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#007bff">
+    <meta name="description" content="Aplicación para registrar y controlar horas de trabajo">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Mis Horas">
+    <link rel="apple-touch-icon" href="./icon-192x192.png">
+    <link rel="icon" type="image/png" href="./icon-192x192.png">
 </head>
 <body>
     <div class="contenedor">
@@ -30,7 +37,7 @@
     </div>
 
     <!-- Menú inferior -->
-<footer class="menu-inferior">
+    <footer class="menu-inferior">
         <div class="menu-item active" id="menu-mis-horas">
             <i class="fas fa-clock"></i>
             <span>Mis Horas</span>
@@ -47,5 +54,16 @@
     
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+                .then(registration => {
+                    console.log('Service Worker registrado con éxito:', registration);
+                })
+                .catch(error => {
+                    console.log('Error al registrar el Service Worker:', error);
+                });
+        }
+    </script>
 </body>
 </html>
